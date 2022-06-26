@@ -1,0 +1,18 @@
+{
+  "name": "heroku-app-status-api",
+  "version": "1.0.0",
+  "description": "An API for getting status of a heroku app, including: used and remaining time and dynos status",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hamid0740/heroku-app-status-api.git"
+  },
+  "author": "hamid0740",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hamid0740/heroku-app-status-api/issues"
+  },
+  "homepage": "https://github.com/hamid0740/heroku-app-status-api",
+  "dependencies": {
+    "heroku": "7.x"
+  }
+}
