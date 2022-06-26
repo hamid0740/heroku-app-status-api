@@ -1,5 +1,5 @@
 # App name: heroku-app-status-api
-# Version: 1.0.0
+# Version: 1.0.1
 # Author: hamid0740
 # License: MIT
 # Github: https://github.com/hamid0740/heroku-app-status-api
@@ -66,9 +66,9 @@ def api(api_key, app_name):
           for i in range(2, len(lines), 2):
             dynos += [{
               "command": " ".join(lines[i].split(": ")[1].split(" ")[:-1]),
+              "name": lines[i+1].split(": ")[0],
               "type": lines[i+1].split(": ")[0].split(".")[0],
-              "code": lines[i+1].split(": ")[0].split(".")[1],
-              "status": lines[i+1].split(": ")[1].split(" ")[0],
+              "state": lines[i+1].split(": ")[1].split(" ")[0],
               "full_time": " ".join(lines[i+1].split(": ")[1].split(" ")[1:])
             }]
           answer = {
@@ -92,9 +92,9 @@ def api(api_key, app_name):
           for i in range(0, len(lines), 2):
             dynos += [{
               "command": " ".join(lines[i].split(": ")[1].split(" ")[:-1]),
+              "name": lines[i+1].split(": ")[0],
               "type": lines[i+1].split(": ")[0].split(".")[0],
-              "code": lines[i+1].split(": ")[0].split(".")[1],
-              "status": lines[i+1].split(": ")[1].split(" ")[0],
+              "state": lines[i+1].split(": ")[1].split(" ")[0],
               "full_time": " ".join(lines[i+1].split(": ")[1].split(" ")[1:])
             }]
           answer = {
