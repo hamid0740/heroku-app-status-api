@@ -1,6 +1,6 @@
 {
   "name": "heroku-app-status-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An API for getting status of a heroku app, including: used and remaining time and dynos status",
   "repository": {
     "type": "git",
